@@ -1,0 +1,26 @@
+{
+  "name": "karan.world",
+  "version": "1.0.0",
+  "description": "Personal Portfolio",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "nodemon server/index.js",
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karanp0202/karan.world.git"
+  },
+  "author": "Karan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karanp0202/karan.world/issues"
+  },
+  "homepage": "https://github.com/karanp0202/karan.world#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "three": "^0.152.2",
+    "webpack": "^5.84.1"
+  }
+}
