@@ -135,7 +135,35 @@ class Snake {
         if (!this.alive)
             return
         this.paused ? this.paused = false : this.paused = true;
-        if (this.paused) document.getElementById("demo").style = "filter:blur(10px)";
-        else document.getElementById("demo").style = "filter:blur(0px)";
+        if (this.paused)
+        {
+            document.getElementById("cube-demo").style.filter = "blur(10px)";
+            document.getElementById("over-menu").style.display = "flex";
+        }   
+        else {
+            document.getElementById("cube-demo").style.filter = "blur(0px)";
+            document.getElementById("over-menu").style.display = "none";
+        }
     }
 }
+
+document.getElementById("snake-resume").addEventListener("click", () => 
+{
+    snake.pause();
+})
+
+document.getElementById("snake-escape").addEventListener("click", () => 
+{
+    if (!snake.paused)
+        snake.pause();
+})
+
+document.getElementById("snake-reset").addEventListener("click", () => 
+{
+    snake = new Snake;
+    tail = new Tail(50);
+    food = new Food(40);
+    cube = new Cube(40, 40, 40);
+    document.getElementById("cube-demo").style.filter = "blur(0px)";
+    document.getElementById("over-menu").style.display = "none";
+})

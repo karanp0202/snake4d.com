@@ -66,3 +66,83 @@ main .content {
     /* margin-top: 10000px; */
     /* overflow: scroll; */
 }
+
+.cube-demo-section {
+    text-align: center;
+    position: relative;
+    width: 50%;
+    min-width: 600px;
+    margin: auto;
+}
+
+#cube-demo {
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+#over-menu-icon {
+    position: absolute;
+    /* display: flex; */
+    margin-top: -44px;
+}
+
+#over-menu-icon button {
+    
+    position: relative;
+    background-color: rgba(230, 230, 230, 0.3);
+    margin-inline: 50px;
+    margin-block: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s ease;
+    width: 48px;
+    height: 48px;
+    font-size: 32px;
+    top: -20px;
+    left: -60px;
+}
+
+#over-menu-icon button:hover {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.7);
+}
+
+#over-menu-icon button:active {
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+
+#over-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+#over-menu button {
+    position: relative;
+    background-color: rgba(230, 230, 230, 0.3);
+    margin-inline: 50px;
+    margin-block: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 24px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+#over-menu button:hover {
+    background-color: rgba(230, 230, 230, 0.6);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.7);
+}
+
+#over-menu button:active {
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+  

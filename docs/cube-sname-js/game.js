@@ -10,13 +10,13 @@ setup = () => {
 
     snake = new Snake;
     tail = new Tail(50);
+    food = new Food(40);
     cube = new Cube(40, 40, 40);
     keyboard = new keyBoard;
-    food = new Food(40);
     var running;
-    createCanvas(500, 500, WEBGL);
+    createCanvas(600, 600, WEBGL);
     angleMode(DEGREES);
-    perspective(20, width / height, 0.1, 500);
+    perspective(13, width / height, 0.1, 500);
     frameRate(60);
     var canvas = document.getElementById("defaultCanvas0");
     canvas.onfocus = () => {
@@ -24,7 +24,7 @@ setup = () => {
     }
 
 
-    this.demo.appendChild(canvas);
+    document.getElementById("cube-demo").appendChild(canvas);
     if (window.matchMedia("(max-width: 786px)").matches) {
         document.getElementById("info").style = "display:none";
         document.getElementById("buttons").style = "display:block";
@@ -74,6 +74,7 @@ keyPressed = () => {
             keyboard.RIGHTKey();
             break;
         case 27:
+            document.getElementById("snake-resume").innerHTML = "Resume";
             snake.pause();
     }
 }
