@@ -158,12 +158,15 @@ document.getElementById("snake-escape").addEventListener("click", () =>
         snake.pause();
 })
 
-document.getElementById("snake-reset").addEventListener("click", () => 
-{
+restart = () => {
     snake = new Snake;
     tail = new Tail(50);
     food = new Food(40);
+    obstacle = new Obstacle(20);
     cube = new Cube(40, 40, 40);
     document.getElementById("cube-demo").style.filter = "blur(0px)";
     document.getElementById("over-menu").style.display = "none";
-})
+    document.getElementById("scorecount").innerHTML = 0;
+}
+
+document.getElementById("snake-reset").addEventListener(restart)

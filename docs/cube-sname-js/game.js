@@ -11,6 +11,7 @@ setup = () => {
     snake = new Snake;
     tail = new Tail(50);
     food = new Food(40);
+    obstacle = new Obstacle(20);
     cube = new Cube(40, 40, 40);
     keyboard = new keyBoard;
     var running;
@@ -47,6 +48,7 @@ draw = () => {
         tail.update();
         tail.check();
         food.check();
+        obstacle.check();
     } else {
         cube.angle.X++;
         cube.angle.Y++;
@@ -57,6 +59,7 @@ draw = () => {
     cube.renderCube();
     tail.renderTail();
     food.renderFood();
+    obstacle.renderObstacle();
 }
 
 keyPressed = () => {

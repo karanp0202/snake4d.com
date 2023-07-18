@@ -43,7 +43,7 @@ class Food {
                 && snake.pos.Z > this.foodvec[i].Z - 2.0 && snake.pos.Z < this.foodvec[i].Z + 2.0) {
                 this.foodvec[i] = this.randomise(); this.score++;
                 tail.add(10);
-                // document.getElementById("scorecount").innerHTML = this.score.toString();;
+                document.getElementById("scorecount").innerHTML = this.score.toString();
             }
         }
     }
