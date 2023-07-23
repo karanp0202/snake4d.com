@@ -15,6 +15,8 @@ class Obstacle {
         switch (parseInt(frame)) {
             case 0:
                 ret.Z = -21;
+                if (ret.Y > 0)
+                    ret.Y = -ret.Y;
                 break;
             case 1:
                 ret.Z = 21;
@@ -43,6 +45,7 @@ class Obstacle {
                     snake.pause();
                     snake.alive = false;
                     document.getElementById("snake-resume").setAttribute("disabled", "disabled");
+                    document.getElementById("hint").style.display = "block"
             }
         }
     }
@@ -51,7 +54,7 @@ class Obstacle {
         for (let i = 0; i < this.Obstaclevec.length; i++) {
             translate(-this.Obstaclevec[i].X, -this.Obstaclevec[i].Y, -this.Obstaclevec[i].Z);
             fill(0, 0, 0);
-            box(2);
+            box(2.2);
             translate(this.Obstaclevec[i].X, this.Obstaclevec[i].Y, this.Obstaclevec[i].Z);
         }
     }

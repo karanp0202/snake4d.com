@@ -38,6 +38,7 @@ class Tail {
                 snake.pause();
                 snake.alive = false;
                 document.getElementById("snake-resume").setAttribute("disabled", "disabled");
+                document.getElementById("hint").style.display = "block";
             }
         }
     }

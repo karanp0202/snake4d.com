@@ -110,6 +110,8 @@ keyPressed = () => {
                 snake.pause();
             break;
         case 82:
+            if (snake.paused && snake.alive)
+                break;
             if (!snake.alive)
             {
                 snake.alive = true;
@@ -117,6 +119,8 @@ keyPressed = () => {
             }
             document.getElementById("cube-snake").style.filter = "saturate(30%)";
             document.getElementById("over-menu").style.display = "flex";
+            document.getElementById("snake-resume").style.display = "none";
+            document.getElementById("snake-reset").style.display = "none";
             // frameRate(30);
             snake.reverse = true;
             break;
@@ -127,8 +131,12 @@ keyPressed = () => {
 keyReleased = () => {
     switch (keyCode) {
         case 82:
+            if (snake.paused && snake.alive)
+                break;
             document.getElementById("cube-snake").style.filter = "none";
             document.getElementById("over-menu").style.display = "none";
+            document.getElementById("snake-resume").style.display = "block";
+            document.getElementById("snake-reset").style.display = "block";
             frameRate(60);
             snake.reverse = false;
             break;

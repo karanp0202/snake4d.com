@@ -135,7 +135,9 @@ class Snake {
     }
     pause = () => {
         if (!this.alive)
+        {
             return
+        }
         this.paused ? this.paused = false : this.paused = true;
         if (this.paused)
         {
@@ -168,6 +170,7 @@ restart = () => {
     cube = new Cube(40, 40, 40);
     document.getElementById("cube-snake").style.filter = "blur(0px)";
     document.getElementById("over-menu").style.display = "none";
+    document.getElementById("hint").style.display = "none"
     document.getElementById("scorecount").innerHTML = 0;
     document.getElementById("snake-resume").removeAttribute("disabled");
 }
