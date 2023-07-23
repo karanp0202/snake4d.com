@@ -2,7 +2,7 @@ var positions = [];
 var angles = [];
 var shapes = [];
 
-var shape_count = 200;
+var shape_count = 150;
 
 var locX = 0;
 var locY = 0;

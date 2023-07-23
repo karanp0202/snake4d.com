@@ -113,11 +113,13 @@ snakeRoam = () => {
 
 class Snake {
     constructor() {
+        this.reverse = false;
         this.paused = false;
         this.Speed = 0.3;
         this.pos = new Vector3(16, 16, -21);
         this.speed = new Vector3(-this.Speed, 0, 0);
         this.alive = true;
+        this.history = [];
     }
     renderFace = () => {
         translate(-this.pos.X, -this.pos.Y, -this.pos.Z);
@@ -141,7 +143,7 @@ class Snake {
             document.getElementById("over-menu").style.display = "flex";
         }   
         else {
-            document.getElementById("cube-snake").style.filter = "blur(0px)";
+            document.getElementById("cube-snake").style.filter = "none";
             document.getElementById("over-menu").style.display = "none";
         }
     }

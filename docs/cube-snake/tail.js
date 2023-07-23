@@ -8,6 +8,7 @@ class Tail {
             this.tailY.push(0);
             this.tailZ.push(0);
         }
+        this.history = [];
     }
 
     add = (count) => {

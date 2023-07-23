@@ -5,6 +5,7 @@ class Food {
         for (let i = 0; i < count; i++){
             this.foodvec[i] = this.randomise();
         }
+        this.history = [];
     }
 
     randomise = () => {
@@ -45,7 +46,6 @@ class Food {
                 // this.foodvec[i] = this.randomise();
                 this.score++;
                 tail.add(10);
-                document.getElementById("scorecount").innerHTML = this.foodvec.length.toString();
             }
         }
     }

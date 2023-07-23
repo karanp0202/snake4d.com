@@ -19,6 +19,10 @@ main h1 {
     width: 100%;
 }
 
+.hint {
+    display: none;
+}
+
 #cube-snake {
     position: absolute;
     z-index: -2;
@@ -34,6 +38,7 @@ main h1 {
     padding-inline: 64px;
     padding-block: 12px;
     border-radius: 12px;
+    font-size: 18px;
 }
 
 #over-menu-icon {
