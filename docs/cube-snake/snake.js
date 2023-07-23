@@ -116,7 +116,7 @@ class Snake {
         this.paused = false;
         this.Speed = 0.3;
         this.pos = new Vector3(16, 16, -21);
-        this.speed = new Vector3(-0.3, 0, 0);
+        this.speed = new Vector3(-this.Speed, 0, 0);
         this.alive = true;
     }
     renderFace = () => {
@@ -137,11 +137,11 @@ class Snake {
         this.paused ? this.paused = false : this.paused = true;
         if (this.paused)
         {
-            document.getElementById("cube-demo").style.filter = "blur(10px)";
+            document.getElementById("cube-snake").style.filter = "blur(10px)";
             document.getElementById("over-menu").style.display = "flex";
         }   
         else {
-            document.getElementById("cube-demo").style.filter = "blur(0px)";
+            document.getElementById("cube-snake").style.filter = "blur(0px)";
             document.getElementById("over-menu").style.display = "none";
         }
     }
@@ -164,9 +164,10 @@ restart = () => {
     food = new Food(40);
     obstacle = new Obstacle(20);
     cube = new Cube(40, 40, 40);
-    document.getElementById("cube-demo").style.filter = "blur(0px)";
+    document.getElementById("cube-snake").style.filter = "blur(0px)";
     document.getElementById("over-menu").style.display = "none";
     document.getElementById("scorecount").innerHTML = 0;
+    document.getElementById("snake-resume").removeAttribute("disabled");
 }
 
-document.getElementById("snake-reset").addEventListener(restart)
+document.getElementById("snake-reset").addEventListener("click", restart)

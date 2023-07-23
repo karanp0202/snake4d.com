@@ -20,16 +20,7 @@ setup = () => {
     perspective(13, width / height, 0.1, 500);
     frameRate(60);
     var canvas = document.getElementById("defaultCanvas0");
-    canvas.onfocus = () => {
-        console.log("now focus")
-    }
-
-
-    document.getElementById("cube-demo").appendChild(canvas);
-    if (window.matchMedia("(max-width: 786px)").matches) {
-        document.getElementById("info").style = "display:none";
-        document.getElementById("buttons").style = "display:block";
-    }
+    document.getElementById("cube-snake").appendChild(canvas);
     snake.pause()
 }
 
@@ -77,7 +68,23 @@ keyPressed = () => {
             keyboard.RIGHTKey();
             break;
         case 27:
-            document.getElementById("snake-resume").innerHTML = "Resume";
-            snake.pause();
+            if (!snake.paused){
+                document.getElementById("snake-resume").innerHTML = "Resume";
+                snake.pause();
+            }
+            break;
+        case 32:
+            if (snake.paused)
+                snake.pause();
+            break;
+        case 82:
+            if (snake.paused)
+                restart();
+            break;
+
     }
+}
+
+keyReleased = () => {
+    console.log(keyCode)
 }

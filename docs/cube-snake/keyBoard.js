@@ -2,8 +2,6 @@ class keyBoard {
     constructor() { }
 
     UPKey = () => {
-        if(snake.paused)
-            snake.pause()
         if (-snake.pos.X < cube.size.X / 2 + 0.4 && -snake.pos.X > -cube.size.X / 2 - 0.4
             && snake.speed.Y == 0)
             switch (cube.frame) {
@@ -43,8 +41,6 @@ class keyBoard {
     }
     
     DOWNKey = () => {
-        if(snake.paused)
-            snake.pause()
         if (-snake.pos.X < cube.size.X / 2 + 0.4 && -snake.pos.X > -cube.size.X / 2 - 0.4
             && snake.speed.Y == 0)
             switch (cube.frame) {
@@ -84,8 +80,6 @@ class keyBoard {
     }
     
     LEFTKey = () => {
-        if(snake.paused)
-            snake.pause()
         if (-snake.pos.Y < cube.size.Y / 2 + 0.4 && -snake.pos.Y > -cube.size.Y / 2 - 0.4
             && snake.speed.X == 0)
             switch (cube.frame) {
@@ -125,8 +119,6 @@ class keyBoard {
     }
     
     RIGHTKey = () => {
-        if(snake.paused)
-            snake.pause()
         if (-snake.pos.Y < cube.size.Y / 2 + 0.4 && -snake.pos.Y > -cube.size.Y / 2 - 0.4
             && snake.speed.X == 0)
             switch (cube.frame) {

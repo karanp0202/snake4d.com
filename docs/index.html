@@ -5,48 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js" type="text/javascript"></script>
 
-    <title>Personal Folio</title>
+    <title>What I can do</title>
 </head>
 <body>
-    <div class="background_dev", id="background_dev"></div>
-    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100" alt="background-image" class="background-image", id="background-image">
-    <!-- <div class="title">
-        <H2>
-            Karan Patil . Software Engineer
-        </H2>
-    </div> -->
-    <!-- <div class="links">
-        <a href="linkedin">linkedin</a>
-    </div> -->
+    <iframe src="./background/" frameborder="0" id="background" allowfullscreen></iframe>
     <main id="main">
-        <div class="content" id="content">
-            <div class="cube-demo-section">
-                <h1>Cube Snake</h1>
-                <div class="col-2" id="cube-demo">
-                    <!-- Here the game canvas will appear -->
-                </div>
-                <div id="over-menu-icon">
-                    <button id="snake-escape">⚙</button>
-                </div>
-                <div id="scorecount"> 0 </div>
-                <div id="over-menu">
-                    <button id="snake-resume">Start</button>
-                    <button id="snake-reset">Restart</button>
-                    <button id="snake-settings">Settings</button>
-                </div>
-            </div>
+        <div class="conten soft-ui entity" id="content">
+            <iframe src="./cube-snake/" frameborder="0" id="cube-snake" allowfullscreen></iframe>
         </div>
     </main>
     <script src="script.js"></script>
-    <script src="./cube-sname-js/cube.js" type="text/javascript"></script>
-    <script src="./cube-sname-js/food.js" type="text/javascript"></script>
-    <script src="./cube-sname-js/obstacles.js" type="text/javascript"></script>
-    <script src="./cube-sname-js/snake.js" type="text/javascript"></script>
-    <script src="./cube-sname-js/tail.js" type="text/javascript"></script>
-    <script src="./cube-sname-js/keyBoard.js" type="text/javascript"></script>
-    <script src="./cube-sname-js/game.js" type="text/javascript"></script>
 </body>
 </html>

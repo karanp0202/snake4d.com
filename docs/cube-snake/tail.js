@@ -12,9 +12,9 @@ class Tail {
 
     add = (count) => {
         for (let i = 0; i < count; i++){
-            this.tailX.push(0);
-            this.tailY.push(0);
-            this.tailZ.push(0);
+            this.tailX.splice(20, 0, this.tailX[20]);
+            this.tailY.splice(20, 0, this.tailY[20]);
+            this.tailZ.splice(20, 0, this.tailZ[20]);
         }
     }
 
@@ -30,13 +30,13 @@ class Tail {
     }
 
     check = () => {
-        for (let i = 20; i < this.tailX.length - 10; i++) {
+        for (let i = 20; i < this.tailX.length; i+= 10) {
             if (snake.pos.X > this.tailX[i] - 2.0 && snake.pos.X < this.tailX[i] + 2.0
                 && snake.pos.Y > this.tailY[i] - 2.0 && snake.pos.Y < this.tailY[i] + 2.0
                 && snake.pos.Z > this.tailZ[i] - 2.0 && snake.pos.Z < this.tailZ[i] + 2.0) {
                 snake.pause();
-                snake.alive = false
-                // console.log("snake is going through tail");
+                snake.alive = false;
+                document.getElementById("snake-resume").setAttribute("disabled", "disabled");
             }
         }
     }
@@ -49,8 +49,8 @@ class Tail {
     }
 
     renderTail = () => {
-        for (let i = 10; i < this.tailX.length; i++) {
-            if(i%10 == 0)this.render(i);
+        for (let i = 10; i < this.tailX.length; i+=10) {
+            this.render(i);
         }
     }
 

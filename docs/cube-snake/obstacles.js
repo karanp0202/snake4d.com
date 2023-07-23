@@ -40,8 +40,9 @@ class Obstacle {
             if (snake.pos.X > this.Obstaclevec[i].X - 2.0 && snake.pos.X < this.Obstaclevec[i].X + 2.0
                 && snake.pos.Y > this.Obstaclevec[i].Y - 2.0 && snake.pos.Y < this.Obstaclevec[i].Y + 2.0
                 && snake.pos.Z > this.Obstaclevec[i].Z - 2.0 && snake.pos.Z < this.Obstaclevec[i].Z + 2.0) {
-                    restart()
-                    snake.pause()
+                    snake.pause();
+                    snake.alive = false;
+                    document.getElementById("snake-resume").setAttribute("disabled", "disabled");
             }
         }
     }
